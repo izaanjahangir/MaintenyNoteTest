@@ -9,9 +9,12 @@ import {
 } from '../../theme/measurements';
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   topContainer: {
     marginVertical: SPACING_SMALL,
-    marginTop: SPACING_MEDIUM,
+    // marginTop: SPACING_MEDIUM,
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -20,5 +23,8 @@ export default StyleSheet.create({
     fontSize: FONT_SIZE_LARGE,
     fontWeight: 'bold',
     flex: 1,
+  },
+  bottomButtonContainer: {
+    marginTop: SPACING_MEDIUM,
   },
 });

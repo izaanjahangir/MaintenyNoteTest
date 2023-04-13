@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {readUserDetails} from '../utils/dateStore';
+import {readUserDetails} from '../utils/dataStore';
 
 const useUserDetails = () => {
   const [user, setUser] = useState(null);

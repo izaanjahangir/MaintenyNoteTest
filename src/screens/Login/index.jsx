@@ -7,7 +7,7 @@ import style from './style';
 import globalStyles from '../../theme/globalStyles';
 import {ROUTES} from '../../navigation/routes';
 import {Button, TextInput} from '../../components';
-import {setUserDetails} from '../../utils/dateStore';
+import {setUserDetails} from '../../utils/dataStore';
 
 const Login = () => {
   const [username, setUsername] = useState('');

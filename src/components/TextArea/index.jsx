@@ -10,6 +10,8 @@ const TextArea = props => {
         multiline={true}
         placeholder={props.placeholder}
         style={style.input}
+        value={props.value}
+        onChangeText={props.onChangeText}
       />
     </View>
   );
