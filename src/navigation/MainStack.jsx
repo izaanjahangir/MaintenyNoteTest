@@ -22,7 +22,13 @@ const MainStack = () => {
         }}
         component={Home}
       />
-      <Stack.Screen name={ROUTES.ADD_EDIT_NOTE} component={AddEditNote} />
+      <Stack.Screen
+        options={{
+          title: 'Note Details',
+        }}
+        name={ROUTES.ADD_EDIT_NOTE}
+        component={AddEditNote}
+      />
     </Stack.Navigator>
   );
 };

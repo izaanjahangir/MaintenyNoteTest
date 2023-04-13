@@ -7,11 +7,19 @@ import globalStyles from '../../theme/globalStyles';
 import DUMMY_NOTES from './DUMMY_NOTES.json';
 
 const Home = () => {
+  const navigation = useNavigation();
+
+  const onNotePress = item => {
+    navigation.navigate(ROUTES.ADD_EDIT_NOTE, {item});
+  };
+
   return (
     <View style={globalStyles.container}>
       <FlatList
         data={DUMMY_NOTES}
-        renderItem={({item}) => <NoteItem data={item} />}
+        renderItem={({item}) => (
+          <NoteItem onPress={() => onNotePress(item)} data={item} />
+        )}
         keyExtractor={item => item.id}
       />
     </View>
