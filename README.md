@@ -1,6 +1,6 @@
 # Mainteny Note Test
 
-This repository contain the test project for Mainteny interview process. This project is only configured and test for android devices
+This repository contain the test project for Mainteny interview process. This project is only configured and tested for android devices
 
 ## Getting Started
 Before running this project, make sure you have React Native and Android Development environment already setup.
