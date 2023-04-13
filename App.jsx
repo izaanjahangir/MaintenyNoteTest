@@ -1,12 +1,13 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, Text} from 'react-native';
+import {StatusBar} from 'react-native';
+import Navigation from './src/navigation';
 
 function App() {
   return (
-    <SafeAreaView>
+    <>
       <StatusBar barStyle="dark-content" />
-      <Text>Izaan</Text>
-    </SafeAreaView>
+      <Navigation />
+    </>
   );
 }
 
