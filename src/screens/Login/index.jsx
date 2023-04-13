@@ -2,19 +2,19 @@ import {useNavigation} from '@react-navigation/native';
 import {View, Text, Button} from 'react-native';
 import {ROUTES} from '../../navigation/routes';
 
-const Home = () => {
+const Login = () => {
   const navigation = useNavigation();
 
-  const onAddEditNavigate = () => {
-    navigation.navigate(ROUTES.ADD_EDIT_NOTE);
+  const onHomeNavigate = () => {
+    navigation.navigate(ROUTES.HOME);
   };
 
   return (
     <View>
-      <Text>Home</Text>
-      <Button title="Test" onPress={onAddEditNavigate} />
+      <Text>Login</Text>
+      <Button title="Test" onPress={onHomeNavigate} />
     </View>
   );
 };
 
-export default Home;
+export default Login;
