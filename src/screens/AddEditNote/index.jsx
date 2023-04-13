@@ -43,13 +43,12 @@ const AddEditNote = ({navigation, route}) => {
   };
 
   const onAddNote = async (options = {}) => {
-    const {state = 'Saved', shouldNavigate = true} = options;
+    const {state = 'Saved'} = options;
 
     try {
       await addNewNote({note, state: state});
-      if (shouldNavigate) {
-        navigation.goBack();
-      }
+
+      navigation.goBack();
 
       return null;
     } catch (e) {
@@ -58,21 +57,17 @@ const AddEditNote = ({navigation, route}) => {
   };
 
   const onEditNote = async (options = {}) => {
-    const {state = 'Saved', shouldNavigate = true} = options;
+    const {state = 'Saved'} = options;
 
     if (note === currentNote.note && currentNote.state === 'Saved') {
-      if (shouldNavigate) {
-        navigation.goBack();
-      }
+      navigation.goBack();
+
       return null;
     }
 
     try {
       await editNote({...currentNote, note, state});
-
-      if (shouldNavigate) {
-        navigation.goBack();
-      }
+      navigation.goBack();
 
       return null;
     } catch (e) {
