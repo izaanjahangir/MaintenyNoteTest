@@ -6,7 +6,5 @@ export default StyleSheet.create({
   container: {
     paddingHorizontal: SPACING_MEDIUM,
     paddingVertical: SPACING_MEDIUM,
-    flex: 1,
-    justifyContent: "center"
   },
 });

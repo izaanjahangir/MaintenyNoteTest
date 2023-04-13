@@ -1,18 +1,19 @@
 import {useNavigation} from '@react-navigation/native';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, ScrollView, FlatList} from 'react-native';
+
+import {NoteItem} from '../../components';
 import {ROUTES} from '../../navigation/routes';
+import globalStyles from '../../theme/globalStyles';
+import DUMMY_NOTES from './DUMMY_NOTES.json';
 
 const Home = () => {
-  const navigation = useNavigation();
-
-  const onAddEditNavigate = () => {
-    navigation.navigate(ROUTES.ADD_EDIT_NOTE);
-  };
-
   return (
-    <View>
-      <Text>Home</Text>
-      <Button title="Test" onPress={onAddEditNavigate} />
+    <View style={globalStyles.container}>
+      <FlatList
+        data={DUMMY_NOTES}
+        renderItem={({item}) => <NoteItem data={item} />}
+        keyExtractor={item => item.id}
+      />
     </View>
   );
 };

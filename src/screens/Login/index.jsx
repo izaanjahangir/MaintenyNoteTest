@@ -14,7 +14,7 @@ const Login = () => {
   };
 
   return (
-    <View style={[globalStyles.container]}>
+    <View style={[globalStyles.container, style.container]}>
       <Text style={style.mainHeadingText}>Welcome to Mainteny Notes</Text>
       <View style={style.formContainer}>
         <TextInput placeholder="Enter your name" label="Username" />

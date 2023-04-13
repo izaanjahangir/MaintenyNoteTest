@@ -15,7 +15,13 @@ const MainStack = () => {
         name={ROUTES.Login}
         component={Login}
       />
-      <Stack.Screen name={ROUTES.HOME} component={Home} />
+      <Stack.Screen
+        name={ROUTES.HOME}
+        options={{
+          title: 'Notes',
+        }}
+        component={Home}
+      />
       <Stack.Screen name={ROUTES.ADD_EDIT_NOTE} component={AddEditNote} />
     </Stack.Navigator>
   );

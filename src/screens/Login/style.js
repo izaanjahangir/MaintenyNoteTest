@@ -7,6 +7,10 @@ import {
 } from '../../theme/measurements';
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
   mainHeadingText: {
     color: THEME_BLACK,
     fontSize: FONT_SIZE_LARGE,
