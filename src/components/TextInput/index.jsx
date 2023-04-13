@@ -5,7 +5,12 @@ const TextInput = props => {
   return (
     <View style={style.container}>
       <Text style={style.labelText}>{props.label}</Text>
-      <TextInputLib placeholder={props.placeholder} style={style.input} />
+      <TextInputLib
+        onChangeText={props.onChangeText}
+        value={props.value}
+        placeholder={props.placeholder}
+        style={style.input}
+      />
     </View>
   );
 };

@@ -7,6 +7,9 @@ export default StyleSheet.create({
     backgroundColor: THEME_DARK,
     padding: SPACING_NORMAL,
   },
+  containerDisabled: {
+    opacity: 0.5
+  },
   text: {
     color: THEME_WHITE,
     fontSize: FONT_SIZE_NORMAL,

@@ -4,17 +4,22 @@ import {ROUTES} from './routes';
 import Home from '../screens/Home';
 import AddEditNote from '../screens/AddEditNote';
 import Login from '../screens/Login';
+import useUserDetails from '../hooks/useUserDetails';
 
 const Stack = createNativeStackNavigator();
 
 const MainStack = () => {
+  const user = useUserDetails();
+
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        options={{headerShown: false}}
-        name={ROUTES.Login}
-        component={Login}
-      />
+    <Stack.Navigator initialRouteName={user ? ROUTES.HOME : ROUTES.Login}>
+      {!user && (
+        <Stack.Screen
+          options={{headerShown: false}}
+          name={ROUTES.Login}
+          component={Login}
+        />
+      )}
       <Stack.Screen
         name={ROUTES.HOME}
         options={{
