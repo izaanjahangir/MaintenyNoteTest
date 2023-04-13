@@ -10,7 +10,11 @@ const Stack = createNativeStackNavigator();
 const MainStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name={ROUTES.Login} component={Login} />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name={ROUTES.Login}
+        component={Login}
+      />
       <Stack.Screen name={ROUTES.HOME} component={Home} />
       <Stack.Screen name={ROUTES.ADD_EDIT_NOTE} component={AddEditNote} />
     </Stack.Navigator>
