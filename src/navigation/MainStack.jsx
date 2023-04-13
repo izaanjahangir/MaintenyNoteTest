@@ -30,6 +30,7 @@ const MainStack = () => {
       <Stack.Screen
         options={{
           title: 'Note Details',
+          headerShown: false,
         }}
         name={ROUTES.ADD_EDIT_NOTE}
         component={AddEditNote}
